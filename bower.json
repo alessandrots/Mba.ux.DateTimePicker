@@ -1,0 +1,40 @@
+{
+    "name": "Mba.ux.DateTimePicker",
+    "version": "0.0.1",
+    "homepage": "https://github.com/bluebile/Mba.ux.DateTimePicker",
+    "authors": [
+        "Bluebile <info@bluebile.com>"
+    ],
+    "description": "Componente para utilização do Date/Time Picker nativo do sistema operacional utilizando Cordova.",
+    "main": [
+        "DatePicker.js",
+        "TimePicker.js"
+    ],
+    "keywords": [
+        "senchatouch",
+        "extjs",
+        "ux",
+        "datepicker",
+        "timepicker"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "Ux.DateTimePicker": "https://github.com/existdissolve/Ext.ux.field.TimePicker.git#763573a716"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "demo",
+        "ux",
+        "**/*.*~",
+        "Gruntfile.js",
+        "bower.json",
+        "package.json",
+        "test",
+        "tests"
+    ],
+    "cordova": {
+        "plugin_url": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker"
+    }
+}
