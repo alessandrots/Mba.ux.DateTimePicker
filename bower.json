@@ -1,6 +1,6 @@
 {
     "name": "Mba.ux.DateTimePicker",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage": "https://github.com/bluebile/Mba.ux.DateTimePicker",
     "authors": [
         "Bluebile <info@bluebile.com>"
@@ -35,6 +35,6 @@
         "tests"
     ],
     "cordova": {
-        "plugin_url": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker"
+        "plugin_url": "https://github.com/bluebile/cordova-plugin-datepicker"
     }
 }
