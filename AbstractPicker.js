@@ -1,9 +1,10 @@
 Ext.define('Mba.ux.DateTimePicker.AbstractPicker', {
     singleton: true,
 
-    setValue: function(scope, value) {
-        var newValue = scope.callParent([value]);
-        if (newValue === null) {
+    setValue: function(scope, newValue) {
+        scope.config.date = newValue;
+        scope.config.value = newValue;
+        if (newValue === null || newValue === '') {
             scope.config.date = new Date();
         }
         return newValue;
@@ -15,29 +16,26 @@ Ext.define('Mba.ux.DateTimePicker.AbstractPicker', {
             return;
         }
 
-        if (typeof datePicker === 'undefined') {
-            scope.callParent();
-            return;
-        }
-
         scope.isFocused = true;
 
         var onSuccess, onError;
 
         onSuccess = function(res) {
             scope.setValue(res);
+            scope.isFocused = false;
         };
 
-        onError = function(e) {
-            console.log('DatePicker: error occurred or cancelled: ' + e);
+        onError = function() {
+            scope.isFocused = false;
+            scope.applyValue(scope.getValue());
         };
 
         try {
             datePicker.show(scope.config, onSuccess, onError);
         } catch (ex) {
+            console.log(ex);
             throw 'Error';
         }
-
     }
 
 });
