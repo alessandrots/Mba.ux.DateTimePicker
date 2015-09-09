@@ -1,6 +1,6 @@
 {
     "name": "Mba.ux.DateTimePicker",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "homepage": "https://github.com/bluebile/Mba.ux.DateTimePicker",
     "authors": [
         "Bluebile <info@bluebile.com>"
@@ -28,7 +28,7 @@
         "demo",
         "ux",
         "**/*.*~",
-        "Gruntfile.js",
+        "gulpfile.js",
         "bower.json",
         "package.json",
         "test",
@@ -37,5 +37,5 @@
     "cordova": {
         "id_or_url_plugin": "https://github.com/bluebile/cordova-plugin-datepicker"
     },
-    "requires": [ "Mba.ux.DatePicker.*" ]
+    "requires": [ "Mba.ux.DateTimePicker.*" ]
 }
