@@ -21,7 +21,9 @@ Ext.define('Mba.ux.DateTimePicker.DatePicker', {
 
     updatePicker: function(newPicker) {
         if (newPicker) {
-            var minDate = new Date(), maxDate = new Date();
+            var minDate= null, maxDate=null;
+        	minDate = new Date(newPicker.yearFrom, 0, 1, 0, 0, 0);
+        	maxDate = new Date(newPicker.yearTo, 11, 31, 0, 0, 0);
             minDate.setFullYear(newPicker.yearFrom);
             maxDate.setFullYear(newPicker.yearTo);
             this.config.minDate = minDate.getTime();
